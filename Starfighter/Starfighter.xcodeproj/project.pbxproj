@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F11A79323B20C6E004BEC65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F11A79223B20C6E004BEC65 /* AppDelegate.swift */; };
+		3F11A79723B20C6E004BEC65 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A79623B20C6E004BEC65 /* Actions.sks */; };
+		3F11A79923B20C6E004BEC65 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F11A79823B20C6E004BEC65 /* GameScene.swift */; };
+		3F11A79B23B20C6E004BEC65 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F11A79A23B20C6E004BEC65 /* GameViewController.swift */; };
+		3F11A79E23B20C6E004BEC65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A79C23B20C6E004BEC65 /* Main.storyboard */; };
+		3F11A7A023B20C70004BEC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A79F23B20C70004BEC65 /* Assets.xcassets */; };
+		3F11A7A323B20C70004BEC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A7A123B20C70004BEC65 /* LaunchScreen.storyboard */; };
+		3F11A7AE23B20C70004BEC65 /* StarfighterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F11A7AD23B20C70004BEC65 /* StarfighterTests.swift */; };
+		3F11A7B923B20C70004BEC65 /* StarfighterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F11A7B823B20C70004BEC65 /* StarfighterUITests.swift */; };
+		3F11A7C723B20D01004BEC65 /* torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A7C623B20D01004BEC65 /* torpedo.mp3 */; };
+		3F11A7C923B20D08004BEC65 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A7C823B20D08004BEC65 /* explosion.mp3 */; };
+		3F11A7CD23B20F73004BEC65 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A7CC23B20F73004BEC65 /* Explosion.sks */; };
+		3F11A7CF23B20F7E004BEC65 /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A7CE23B20F7E004BEC65 /* Starfield.sks */; };
+		3F11A7D123B2127D004BEC65 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A7D023B2127D004BEC65 /* GameScene.sks */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F11A7AA23B20C70004BEC65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F11A78723B20C6E004BEC65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F11A78E23B20C6E004BEC65;
+			remoteInfo = Starfighter;
+		};
+		3F11A7B523B20C70004BEC65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F11A78723B20C6E004BEC65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F11A78E23B20C6E004BEC65;
+			remoteInfo = Starfighter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F11A78F23B20C6E004BEC65 /* Starfighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starfighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F11A79223B20C6E004BEC65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F11A79623B20C6E004BEC65 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		3F11A79823B20C6E004BEC65 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		3F11A79A23B20C6E004BEC65 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		3F11A79D23B20C6E004BEC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F11A79F23B20C70004BEC65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F11A7A223B20C70004BEC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F11A7A423B20C70004BEC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F11A7A923B20C70004BEC65 /* StarfighterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarfighterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F11A7AD23B20C70004BEC65 /* StarfighterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarfighterTests.swift; sourceTree = "<group>"; };
+		3F11A7AF23B20C70004BEC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F11A7B423B20C70004BEC65 /* StarfighterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarfighterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F11A7B823B20C70004BEC65 /* StarfighterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarfighterUITests.swift; sourceTree = "<group>"; };
+		3F11A7BA23B20C70004BEC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F11A7C623B20D01004BEC65 /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
+		3F11A7C823B20D08004BEC65 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		3F11A7CC23B20F73004BEC65 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		3F11A7CE23B20F7E004BEC65 /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		3F11A7D023B2127D004BEC65 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F11A78C23B20C6E004BEC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F11A7A623B20C70004BEC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F11A7B123B20C70004BEC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F11A78623B20C6E004BEC65 = {
+			isa = PBXGroup;
+			children = (
+				3F11A79123B20C6E004BEC65 /* Starfighter */,
+				3F11A7AC23B20C70004BEC65 /* StarfighterTests */,
+				3F11A7B723B20C70004BEC65 /* StarfighterUITests */,
+				3F11A79023B20C6E004BEC65 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F11A79023B20C6E004BEC65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F11A78F23B20C6E004BEC65 /* Starfighter.app */,
+				3F11A7A923B20C70004BEC65 /* StarfighterTests.xctest */,
+				3F11A7B423B20C70004BEC65 /* StarfighterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F11A79123B20C6E004BEC65 /* Starfighter */ = {
+			isa = PBXGroup;
+			children = (
+				3F11A79223B20C6E004BEC65 /* AppDelegate.swift */,
+				3F11A7D023B2127D004BEC65 /* GameScene.sks */,
+				3F11A79623B20C6E004BEC65 /* Actions.sks */,
+				3F11A79823B20C6E004BEC65 /* GameScene.swift */,
+				3F11A79A23B20C6E004BEC65 /* GameViewController.swift */,
+				3F11A79C23B20C6E004BEC65 /* Main.storyboard */,
+				3F11A7C623B20D01004BEC65 /* torpedo.mp3 */,
+				3F11A7C823B20D08004BEC65 /* explosion.mp3 */,
+				3F11A79F23B20C70004BEC65 /* Assets.xcassets */,
+				3F11A7CE23B20F7E004BEC65 /* Starfield.sks */,
+				3F11A7CC23B20F73004BEC65 /* Explosion.sks */,
+				3F11A7A123B20C70004BEC65 /* LaunchScreen.storyboard */,
+				3F11A7A423B20C70004BEC65 /* Info.plist */,
+			);
+			path = Starfighter;
+			sourceTree = "<group>";
+		};
+		3F11A7AC23B20C70004BEC65 /* StarfighterTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F11A7AD23B20C70004BEC65 /* StarfighterTests.swift */,
+				3F11A7AF23B20C70004BEC65 /* Info.plist */,
+			);
+			path = StarfighterTests;
+			sourceTree = "<group>";
+		};
+		3F11A7B723B20C70004BEC65 /* StarfighterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F11A7B823B20C70004BEC65 /* StarfighterUITests.swift */,
+				3F11A7BA23B20C70004BEC65 /* Info.plist */,
+			);
+			path = StarfighterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F11A78E23B20C6E004BEC65 /* Starfighter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F11A7BD23B20C70004BEC65 /* Build configuration list for PBXNativeTarget "Starfighter" */;
+			buildPhases = (
+				3F11A78B23B20C6E004BEC65 /* Sources */,
+				3F11A78C23B20C6E004BEC65 /* Frameworks */,
+				3F11A78D23B20C6E004BEC65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Starfighter;
+			productName = Starfighter;
+			productReference = 3F11A78F23B20C6E004BEC65 /* Starfighter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F11A7A823B20C70004BEC65 /* StarfighterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F11A7C023B20C70004BEC65 /* Build configuration list for PBXNativeTarget "StarfighterTests" */;
+			buildPhases = (
+				3F11A7A523B20C70004BEC65 /* Sources */,
+				3F11A7A623B20C70004BEC65 /* Frameworks */,
+				3F11A7A723B20C70004BEC65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F11A7AB23B20C70004BEC65 /* PBXTargetDependency */,
+			);
+			name = StarfighterTests;
+			productName = StarfighterTests;
+			productReference = 3F11A7A923B20C70004BEC65 /* StarfighterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F11A7B323B20C70004BEC65 /* StarfighterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F11A7C323B20C70004BEC65 /* Build configuration list for PBXNativeTarget "StarfighterUITests" */;
+			buildPhases = (
+				3F11A7B023B20C70004BEC65 /* Sources */,
+				3F11A7B123B20C70004BEC65 /* Frameworks */,
+				3F11A7B223B20C70004BEC65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F11A7B623B20C70004BEC65 /* PBXTargetDependency */,
+			);
+			name = StarfighterUITests;
+			productName = StarfighterUITests;
+			productReference = 3F11A7B423B20C70004BEC65 /* StarfighterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F11A78723B20C6E004BEC65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Arthur BLANC";
+				TargetAttributes = {
+					3F11A78E23B20C6E004BEC65 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					3F11A7A823B20C70004BEC65 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 3F11A78E23B20C6E004BEC65;
+					};
+					3F11A7B323B20C70004BEC65 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 3F11A78E23B20C6E004BEC65;
+					};
+				};
+			};
+			buildConfigurationList = 3F11A78A23B20C6E004BEC65 /* Build configuration list for PBXProject "Starfighter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F11A78623B20C6E004BEC65;
+			productRefGroup = 3F11A79023B20C6E004BEC65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F11A78E23B20C6E004BEC65 /* Starfighter */,
+				3F11A7A823B20C70004BEC65 /* StarfighterTests */,
+				3F11A7B323B20C70004BEC65 /* StarfighterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F11A78D23B20C6E004BEC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F11A79E23B20C6E004BEC65 /* Main.storyboard in Resources */,
+				3F11A7A023B20C70004BEC65 /* Assets.xcassets in Resources */,
+				3F11A7A323B20C70004BEC65 /* LaunchScreen.storyboard in Resources */,
+				3F11A7C923B20D08004BEC65 /* explosion.mp3 in Resources */,
+				3F11A7CD23B20F73004BEC65 /* Explosion.sks in Resources */,
+				3F11A7CF23B20F7E004BEC65 /* Starfield.sks in Resources */,
+				3F11A7C723B20D01004BEC65 /* torpedo.mp3 in Resources */,
+				3F11A7D123B2127D004BEC65 /* GameScene.sks in Resources */,
+				3F11A79723B20C6E004BEC65 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F11A7A723B20C70004BEC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F11A7B223B20C70004BEC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F11A78B23B20C6E004BEC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F11A79923B20C6E004BEC65 /* GameScene.swift in Sources */,
+				3F11A79B23B20C6E004BEC65 /* GameViewController.swift in Sources */,
+				3F11A79323B20C6E004BEC65 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F11A7A523B20C70004BEC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F11A7AE23B20C70004BEC65 /* StarfighterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F11A7B023B20C70004BEC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F11A7B923B20C70004BEC65 /* StarfighterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F11A7AB23B20C70004BEC65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F11A78E23B20C6E004BEC65 /* Starfighter */;
+			targetProxy = 3F11A7AA23B20C70004BEC65 /* PBXContainerItemProxy */;
+		};
+		3F11A7B623B20C70004BEC65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F11A78E23B20C6E004BEC65 /* Starfighter */;
+			targetProxy = 3F11A7B523B20C70004BEC65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F11A79C23B20C6E004BEC65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F11A79D23B20C6E004BEC65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F11A7A123B20C70004BEC65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F11A7A223B20C70004BEC65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F11A7BB23B20C70004BEC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F11A7BC23B20C70004BEC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F11A7BE23B20C70004BEC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Starfighter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yo.Starfighter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F11A7BF23B20C70004BEC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Starfighter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yo.Starfighter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3F11A7C123B20C70004BEC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StarfighterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yo.StarfighterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Starfighter.app/Starfighter";
+			};
+			name = Debug;
+		};
+		3F11A7C223B20C70004BEC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StarfighterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yo.StarfighterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Starfighter.app/Starfighter";
+			};
+			name = Release;
+		};
+		3F11A7C423B20C70004BEC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StarfighterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yo.StarfighterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Starfighter;
+			};
+			name = Debug;
+		};
+		3F11A7C523B20C70004BEC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StarfighterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yo.StarfighterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Starfighter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F11A78A23B20C6E004BEC65 /* Build configuration list for PBXProject "Starfighter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F11A7BB23B20C70004BEC65 /* Debug */,
+				3F11A7BC23B20C70004BEC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F11A7BD23B20C70004BEC65 /* Build configuration list for PBXNativeTarget "Starfighter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F11A7BE23B20C70004BEC65 /* Debug */,
+				3F11A7BF23B20C70004BEC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F11A7C023B20C70004BEC65 /* Build configuration list for PBXNativeTarget "StarfighterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F11A7C123B20C70004BEC65 /* Debug */,
+				3F11A7C223B20C70004BEC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F11A7C323B20C70004BEC65 /* Build configuration list for PBXNativeTarget "StarfighterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F11A7C423B20C70004BEC65 /* Debug */,
+				3F11A7C523B20C70004BEC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F11A78723B20C6E004BEC65 /* Project object */;
+}
