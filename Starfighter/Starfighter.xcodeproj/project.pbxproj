@@ -21,6 +21,8 @@
 		3F11A7CD23B20F73004BEC65 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A7CC23B20F73004BEC65 /* Explosion.sks */; };
 		3F11A7CF23B20F7E004BEC65 /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A7CE23B20F7E004BEC65 /* Starfield.sks */; };
 		3F11A7D123B2127D004BEC65 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3F11A7D023B2127D004BEC65 /* GameScene.sks */; };
+		3F42F03923B4F85400958A28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F42F03723B4F85400958A28 /* ViewController.swift */; };
+		3F42F03A23B4F85400958A28 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F42F03823B4F85400958A28 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		3F11A7CC23B20F73004BEC65 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		3F11A7CE23B20F7E004BEC65 /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
 		3F11A7D023B2127D004BEC65 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		3F42F03723B4F85400958A28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F42F03823B4F85400958A28 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				3F11A7CC23B20F73004BEC65 /* Explosion.sks */,
 				3F11A7A123B20C70004BEC65 /* LaunchScreen.storyboard */,
 				3F11A7A423B20C70004BEC65 /* Info.plist */,
+				3F42F03723B4F85400958A28 /* ViewController.swift */,
+				3F42F03823B4F85400958A28 /* ViewController.xib */,
 			);
 			path = Starfighter;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F42F03A23B4F85400958A28 /* ViewController.xib in Resources */,
 				3F11A79E23B20C6E004BEC65 /* Main.storyboard in Resources */,
 				3F11A7A023B20C70004BEC65 /* Assets.xcassets in Resources */,
 				3F11A7A323B20C70004BEC65 /* LaunchScreen.storyboard in Resources */,
@@ -285,6 +292,7 @@
 			files = (
 				3F11A79923B20C6E004BEC65 /* GameScene.swift in Sources */,
 				3F11A79B23B20C6E004BEC65 /* GameViewController.swift in Sources */,
+				3F42F03923B4F85400958A28 /* ViewController.swift in Sources */,
 				3F11A79323B20C6E004BEC65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

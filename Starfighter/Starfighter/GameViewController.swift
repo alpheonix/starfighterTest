@@ -11,6 +11,14 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    
+    override func loadView() {
+      self.view = SKView()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+           self.navigationController?.setNavigationBarHidden(true, animated: animated)
+           
+       }
 
     override func viewDidLoad() {
         super.viewDidLoad()
