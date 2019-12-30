@@ -16,19 +16,12 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     var lifeAlienLabel:SKLabelNode!
     var win: SKLabelNode!
     var player:SKSpriteNode!
-    
+    var HealthBarPlayer: SKSpriteNode!
+    var HealthBarEnemy: SKSpriteNode!
     var torpilleNode: SKSpriteNode!
     var alien: SKSpriteNode!
-    var lifePlayer:Int = 500{
-     didSet {
-        lifePlayerLabel.text = "\(lifePlayer) / 500"
-        }
-    }
-    var lifeAlien:Int = 300{
-     didSet {
-        lifeAlienLabel.text = "\(lifeAlien) / 300"
-        }
-    }
+    var lifePlayer:Int = 500
+    var lifeAlien:Int = 300
     var possibleAliens = ["tie","falcon","starDestroyer"]
     
     var gameTimer: Timer!
@@ -37,13 +30,20 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     let playerCategory:UInt32 = 0x1 << 2
     override func didMove(to view: SKView) {
         
+    
         starfield = SKEmitterNode(fileNamed: "Starfield")
         starfield.position = CGPoint(x: 0, y: 1472)
         starfield.advanceSimulationTime(10)
         self.addChild(starfield)
         starfield.zPosition = -1
+        let url = URL(string: "https://webstockreview.net/images1280_/falcon-clipart-millenium-falcon-11.png")
+        let data = try! Data(contentsOf: url!)
+        let image = UIImage(data: data)
+        let Texture = SKTexture(image: image!)
         
-        player = SKSpriteNode(imageNamed: "falcon")
+        
+        
+        player = SKSpriteNode(texture: Texture)
         player.name = "player"
         
         player.position = CGPoint(x: 0, y: -450)
@@ -56,23 +56,19 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         
         self.addChild(player)
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
-        
         self.physicsWorld.contactDelegate = self
         
-        lifePlayerLabel = SKLabelNode(text: "500 / 500")
-        lifePlayerLabel.position = CGPoint(x: self.frame.width / -4.2, y: self.frame.height / -2.5)
-        lifePlayerLabel.fontName = "Zapfino"
-        lifePlayerLabel.fontSize = 36
-        lifePlayerLabel.color = UIColor.white
-        self.addChild(lifePlayerLabel)
         
-        lifeAlienLabel = SKLabelNode(text: "300 / 300")
-     
-        lifeAlienLabel.position = CGPoint(x: self.frame.width / 4.2, y: self.frame.height/2.5)
-        lifeAlienLabel.fontName = "Zapfino"
-        lifeAlienLabel.fontSize = 32
-        lifeAlienLabel.color = UIColor.white
-        self.addChild(lifeAlienLabel)
+        HealthBarPlayer = SKSpriteNode(color:SKColor .yellow, size: CGSize(width: lifePlayer, height: 30))
+        HealthBarPlayer.position = CGPoint(x: self.frame.width / -4.2, y: self.frame.height / -2.5)
+        HealthBarPlayer.zPosition = 1
+        self.addChild(HealthBarPlayer)
+        
+        HealthBarEnemy = SKSpriteNode(color:SKColor .yellow, size: CGSize(width: lifeAlien, height: 30))
+        HealthBarEnemy.position = CGPoint(x: self.frame.width / 4.2, y: self.frame.height/2.5)
+        HealthBarEnemy.zPosition = 1
+        self.addChild(HealthBarEnemy)
+        
         addAlien()
         gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(enemyFire), userInfo: nil, repeats: true)
         
@@ -85,10 +81,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         torpilleNode = SKSpriteNode(imageNamed: "torpedo")
         torpilleNode.size = CGSize(width: torpilleNode.size.width/3, height: torpilleNode.size.width/3)
         torpilleNode.position = CGPoint(x: 0, y: alien.position.y - alien.size.height)
-       
         torpilleNode.position.y += 5
-        
-
         torpilleNode.physicsBody = SKPhysicsBody(rectangleOf: torpilleNode!.size)
         torpilleNode.physicsBody?.isDynamic = true
         torpilleNode.physicsBody?.categoryBitMask = torpilleCategory
@@ -109,20 +102,19 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
     }
     
     func addAlien( ){
-    possibleAliens = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: possibleAliens) as! [String]
-     alien = SKSpriteNode(imageNamed: possibleAliens[0])
-    alien.size = CGSize(width: alien.size.width/3, height: alien.size.width/3)
-    let randomPos = GKRandomDistribution(lowestValue: -300, highestValue: 300)
-    let position = CGFloat(randomPos.nextInt())
+        possibleAliens = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: possibleAliens) as! [String]
+        alien = SKSpriteNode(imageNamed: possibleAliens[0])
+        alien.size = CGSize(width: alien.size.width/3, height: alien.size.width/3)
+       
         alien.name = "alien"
-    alien.position = CGPoint(x: 0, y: 500)
-    alien.physicsBody = SKPhysicsBody(rectangleOf: alien.size)
-    alien.physicsBody?.isDynamic = true
-    
-    alien.physicsBody?.categoryBitMask = alienCategory
-    alien.physicsBody?.contactTestBitMask = torpilleCategory
-    alien.physicsBody?.collisionBitMask = 0
-    self.addChild(alien)
+        alien.position = CGPoint(x: 0, y: 500)
+        alien.physicsBody = SKPhysicsBody(rectangleOf: alien.size)
+        alien.physicsBody?.isDynamic = true
+        
+        alien.physicsBody?.categoryBitMask = alienCategory
+        alien.physicsBody?.contactTestBitMask = torpilleCategory
+        alien.physicsBody?.collisionBitMask = 0
+        self.addChild(alien)
     
     }
 
@@ -137,7 +129,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
         torpilleNode.size = CGSize(width: torpilleNode.size.width/3, height: torpilleNode.size.width/3)
         torpilleNode.position = CGPoint(x: 0, y: player.position.y + player.size.height)
         
-        print(torpilleNode.position.y)
+        
         torpilleNode.physicsBody = SKPhysicsBody(rectangleOf: torpilleNode!.size)
         torpilleNode.physicsBody?.isDynamic = true
         torpilleNode.physicsBody?.categoryBitMask = torpilleCategory
@@ -193,8 +185,10 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
             explosion?.removeFromParent()
         }
         if(alien.name == "player" ){
+            HealthBarPlayer.size = CGSize(width: lifePlayer, height: 30)
             lifePlayer -= 10
         }else{
+            HealthBarEnemy.size = CGSize(width: lifeAlien, height: 30)
                 lifeAlien -= 5
         }
         
@@ -205,6 +199,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate {
             win.fontSize = 50
             win.color = UIColor.white
             addChild(win)
+            self.scene?.view!.isPaused = true
             
         }
     }
